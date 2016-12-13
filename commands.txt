@@ -1,0 +1,11 @@
+docker build --rm -t alpine_w_cron .
+
+docker run -it --name=alpine_w_cron_1 --env-file=.env.test alpine_w_cron
+
+----
+To stop and remove remove:
+docker stop alpine_w_cron_1
+docker rm alpine_w_cron_1
+docker rmi alpine_w_cron
+
+docker rm alpine_w_cron_1 && docker rmi alpine_w_cron
